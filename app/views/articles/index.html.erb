@@ -1,0 +1,12 @@
+<h1>All the articles</h1>
+
+<button><%= link_to "Create new article", new_article_path%> </button>
+
+
+<div>
+<% @articles.each do |article| %>
+<h3><%=article.title%></h3>
+<p><%=article.content%></p>
+<%= link_to "See more", article_path(article)%>
+<%end%>
+</div>
